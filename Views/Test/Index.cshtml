@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div ng-app="myapp">
+    <div ng-controller="TestCtrl">
+        {{Message}}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in x">
+                    <td>{{item.T6091F08}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="alert alert-primary" role="alert">
+            A simple primary alert—check it out!
+        </div>
+        <i class="fab fa-accessible-icon"></i>
+        <md-card-content>
+            <div layout="row" layout-align="space-between center">
+                <span>What is your favorite weapon?</span>
+                <md-select ng-model="weapon" placeholder="Weapon" class="md-no-underline">
+                    <md-option value="axe">Axe</md-option>
+                    <md-option value="sword">Sword</md-option>
+                    <md-option value="wand">Wand</md-option>
+                    <md-option value="pen">Pen?</md-option>
+                </md-select>
+            </div>
+
+            <div layout="row" layout-align="space-between center">
+                <span>What armor do you wear?</span>
+                <md-select ng-model="armor" placeholder="Armor" class="md-no-underline" required="" md-no-asterisk="false">
+                    <md-option value="cloth">Cloth</md-option>
+                    <md-option value="leather">Leather</md-option>
+                    <md-option value="chain">Chainmail</md-option>
+                    <md-option value="plate">Plate</md-option>
+                </md-select>
+            </div>
+
+            <div layout="row" layout-align="space-between center">
+                <span>How do you refresh your magic?</span>
+                <md-select ng-model="drink" placeholder="Drink" class="md-no-underline">
+                    <md-option value="water">Water</md-option>
+                    <md-option value="juice">Juice</md-option>
+                    <md-option value="milk">Milk</md-option>
+                    <md-option value="wine">Wine</md-option>
+                    <md-option value="mead">Mead</md-option>
+                </md-select>
+            </div>
+        </md-card-content>
+        </md-card>
+    </div>
+  
+</div>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+@*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" >*@
+<script src="~/Scripts/angular.min.js"></script>
+<script src="~/ScriptsNg/Controller/TestCtrl.js"></script>
